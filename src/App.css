@@ -36,3 +36,49 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-top: 50px;
+  min-width: 375px;
+  max-width: 800px;
+}
+
+.moviePoster {
+  padding: 20px;
+}
+
+.movieDetails {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleDiv {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.titleDiv h2 {
+  margin: 10px;
+}
+
+.movieSpecs {
+  border: 1px solid blue;
+  display: flex;
+}
+
+.movieSpecs p {
+  padding: 5px;
+  margin: 5px;
+  background-color: rgb(69, 80, 180);
+  color: white;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+.movieInfo {
+
+}
