@@ -18,7 +18,11 @@ class App extends React.Component {
       genre: "",
       plot: "",
       actors: "",
-      rated: ""
+      rated: "",
+      search: "",
+      isLoading: "",
+      movies: "",
+      error: ""
     }
   }
 
@@ -28,27 +32,41 @@ class App extends React.Component {
     fetch(url)
       .then(res => res.json())
       .then(res => {
-        // this.setState only can accept one argument at a time
-        this.setState({posterUrl: res.Poster});
-        this.setState({title: res.Title});
-        this.setState({ratings: res.imdbRating});
-        this.setState({runtime: res.Runtime});
-        this.setState({genre: res.Genre});
-        this.setState({plot: res.Plot});
-        this.setState({actors: res.Actors});
-        this.setState({rated: res.Rated});
-                
+
+        this.setState({
+          posterUrl: res.Poster,
+          title: res.Title,
+          ratings: res.imdbRating,
+          runtime: res.Runtime,
+          genre: res.Genre,
+          plot: res.Plot,
+          actors: res.Actors,
+          rated: res.Rated
+          
+        })     
       })
       .catch(err => console.log("error", err))
   }
 
   render(){
+
     return (
         <div className="App">
           {/* pass in props in MovieCard OR MovieDetails tag */}
+          
+          <MovieCard 
+            title={this.state.title} 
+            posterUrl={this.state.posterUrl} 
+            ratings={this.state.ratings}
+            runtime={this.state.runtime}
+            genre={this.state.genre}
+            plot={this.state.plot}
+            actors={this.state.actors}
+            rated={this.state.rated}
 
-        {/* <MovieCard title={this.state.title} posterUrl={this.state.posterUrl} type={this.state.type} /> */}
-        <MovieDetails 
+         />
+
+        {/* <MovieDetails 
           posterUrl={this.state.posterUrl}
           title={this.state.title}
           ratings={this.state.ratings}
@@ -57,7 +75,8 @@ class App extends React.Component {
           plot={this.state.plot}
           actors={this.state.actors}
           rated={this.state.rated}
-          />
+          /> */}
+
         </div>
       );
 

@@ -1,40 +1,9 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin: 0 auto;
+  justify-items: center;
 }
 
 .container {
@@ -46,30 +15,61 @@
   max-width: 800px;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: auto;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img {
+  height: 400px;
+  width: auto;
+  margin-bottom: 25px;
+}
+
 .moviePoster {
   padding: 20px;
 }
 
 .movieDetails {
-  border: 1px solid red;
+  height: 350px;
   display: flex;
+  justify-content: first baseline;
   flex-direction: column;
 }
 
 .titleDiv {
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  padding: 5px;
 }
 .titleDiv h2 {
   margin: 10px;
+  text-align: left;
+  font-size: 1.1em;
+  max-width: 75%;
+  max-height: 90%;
+  color: rgb(69, 80, 180);
+}
+
+.titleDiv .ratings {
+  font-size: 1.6em;
+  align-self: center;
+  color: rgb(221, 111, 21);
 }
 
 .movieSpecs {
-  border: 1px solid blue;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
+/* movie specs blue background */
 .movieSpecs p {
   padding: 5px;
   margin: 5px;
@@ -77,8 +77,55 @@
   color: white;
   font-weight: bolder;
   border-radius: 5px;
+  font-size: 0.7em;
+  font-weight: 500;
 }
 
 .movieInfo {
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0;
+  margin-bottom: 10px;
+}
 
+.movieInfo h4 {
+  margin-bottom: 5px;
+}
+.movieInfo p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+button {
+  font-size: 15px;
+  color: white;
+  height: 35px;
+  width: 75px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  background-color: rgb(221, 111, 21);
+}
+
+button:hover {
+  background-color: rgb(185, 93, 18);
+  cursor: pointer;
+}
+
+.Modal {
+  background-color: whitesmoke;
+  width: 600px;
+  height: 500px;
+  z-index: 100;
+  position: relative;
+  top: -500px;
+  margin: 0 auto;
+  border-radius: 1em;
+}
+
+.Modal img {
+  height: 300px;
+  width: auto;
 }

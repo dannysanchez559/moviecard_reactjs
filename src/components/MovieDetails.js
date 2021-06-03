@@ -10,7 +10,7 @@ const MovieDetails = (props) => {
 
                 <div className = 'titleDiv'>
                     <h2>{props.title}</h2>
-                    <h2>{props.ratings}</h2>
+                    <h2 className='ratings'>{props.ratings}</h2>
                 </div>
                 <div className = 'movieSpecs'>
                     <p>{props.rated}</p>
@@ -18,7 +18,9 @@ const MovieDetails = (props) => {
                     <p>{props.genre}</p>
                 </div>
                 <div className = 'movieInfo'>
+                    <h4>Plot</h4>
                     <p>{props.plot}</p>
+                    <h4>Actors</h4>
                     <p>{props.actors}</p>
 
                 </div>
